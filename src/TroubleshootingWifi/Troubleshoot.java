@@ -11,50 +11,55 @@ public class Troubleshoot
     {
         Scanner input = new Scanner(System.in); // The "input" variable sets up the user input function.
         System.out.println("Reboot the computer and try to connect.");
-        System.out.print("Did that fix the problem? (true/false): ");
-        boolean isFixed1 = input.nextBoolean(); // The "isFixed1" variable takes the first boolean.
+        System.out.print("Did that fix the problem? (yes/no): ");
+        String value1 = input.nextLine(); // The "value1" variable takes the first boolean.
 
-        if(isFixed1)
+        boolean isYes = value1.trim().equalsIgnoreCase("yes"); // Converts "yes" into a boolean.
+
+
+        if(isYes)
         {
-            return;
+            System.out.println("[TROUBLESHOOT SUCCESSFUL]");
         }
         else
         {
             System.out.println("\nReboot the router and try to connect.");
-            System.out.print("Did that fix the problem? (true/false): ");
-            boolean isFixed2 = input.nextBoolean(); // The "isFixed2" variable takes the second boolean.
+            System.out.print("Did that fix the problem? (yes/no): ");
+            String value2 = input.nextLine();
+            boolean isYes2 = value2.trim().equalsIgnoreCase("yes");
 
-            if(isFixed2)
+            if(isYes2)
             {
-                return;
+                System.out.println("[TROUBLESHOOT SUCCESSFUL]");
             }
             else
             {
                 System.out.println("\nMake sure the cables between the router & modem are plugged in firmly.");
-                System.out.print("Did that fix the problem? (true/false): ");
-                boolean isFixed3 = input.nextBoolean(); // The "isFixed3" variable takes the third boolean.
+                System.out.print("Did that fix the problem? (yes/no): ");
+                String value3 = input.nextLine();
+                boolean isYes3 = value2.trim().equalsIgnoreCase("yes");
 
-                if(isFixed3)
+                if(isYes3)
                 {
-                    return;
+                    System.out.println("[TROUBLESHOOT SUCCESSFUL]");
                 }
                 else
                 {
                     System.out.println("\nMove the router to a new location.");
-                    System.out.print("Did that fix the problem? (true/false): ");
-                    boolean isFixed4 = input.nextBoolean(); // The "isFixed4" variable takes the fourth boolean.
+                    System.out.print("Did that fix the problem? (yes/no): ");
+                    String value4 = input.nextLine();
+                    boolean isYes4 = value2.trim().equalsIgnoreCase("yes");
 
-                    if(isFixed4)
+                    if(isYes4)
                     {
-                        return;
+                        System.out.println("[TROUBLESHOOT SUCCESSFUL]");
                     }
                     else
                     {
-                        System.out.println("\nGet a new router.");
+                        System.out.println("\nGet a new router!");
                     }
                 }
             }
         }
-
     }
 }
