@@ -16,7 +16,6 @@ public class Troubleshoot
 
         boolean isYes = value1.trim().equalsIgnoreCase("yes"); // Converts "yes" into a boolean.
 
-
         if(isYes)
         {
             System.out.println("[TROUBLESHOOT SUCCESSFUL]");
